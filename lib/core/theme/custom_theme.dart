@@ -9,19 +9,13 @@ class CustomTheme {
         titleTextStyle: GoogleFonts.urbanist(
           textStyle: const TextStyle(
             fontSize: 24,
-            color: Colors.black,
+            color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
         ),
         surfaceTintColor: Colors.white,
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.pinkAccent,
         iconTheme: const IconThemeData(color: Colors.white),
-        elevation: 10,
-        shape: const Border(
-          bottom: BorderSide(
-            width: 0.5,
-          ),
-        ),
       ),
       brightness: Brightness.light,
       checkboxTheme: CheckboxThemeData(
@@ -49,6 +43,13 @@ class CustomTheme {
               fontWeight: FontWeight.bold,
             ),
           ),
+        ),
+      ),
+      floatingActionButtonTheme: FloatingActionButtonThemeData(
+        backgroundColor: Colors.pinkAccent,
+        foregroundColor: Colors.white,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(48),
         ),
       ),
       inputDecorationTheme: InputDecorationTheme(

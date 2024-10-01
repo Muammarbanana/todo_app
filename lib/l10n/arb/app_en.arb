@@ -1,4 +1,7 @@
 {
+  "homeAppTitleText": "Todo App",
+  "homeSearchTitleText": "Search task",
+  "homeTaskListText": "Task List",
   "loginEmailTitleText": "Email",
   "loginForgotPassswordText": "Forgot Password?",
   "loginNeedAccountText": "Need an account?",

@@ -1,4 +1,7 @@
 {
+  "homeAppTitleText": "Todo App",
+  "homeSearchTitleText": "Cari task",
+  "homeTaskListText": "Daftar Task",
   "loginEmailTitleText": "Email",
   "loginForgotPassswordText": "Lupa Kata Sandi?",
   "loginNeedAccountText": "Butuh akun?",

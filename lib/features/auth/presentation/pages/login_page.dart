@@ -2,9 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:todo_app/features/features.dart';
 import 'package:todo_app/l10n/l10n.dart';
 
-class LoginPage extends StatelessWidget {
+class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
 
+  @override
+  State<LoginPage> createState() => _LoginPageState();
+}
+
+class _LoginPageState extends State<LoginPage> {
+  bool checkBoxValue = false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,7 +37,14 @@ class LoginPage extends StatelessWidget {
                   SizedBox(
                     height: 24,
                     width: 24,
-                    child: Checkbox(value: true, onChanged: (value) {}),
+                    child: Checkbox(
+                      value: checkBoxValue,
+                      onChanged: (value) {
+                        setState(() {
+                          checkBoxValue = value!;
+                        });
+                      },
+                    ),
                   ),
                   const SizedBox(width: 12),
                   Text(context.l10n.loginRememberMeText),
@@ -41,7 +54,14 @@ class LoginPage extends StatelessWidget {
               SizedBox(
                 width: double.infinity,
                 child: ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute<dynamic>(
+                        builder: (context) => const HomePage(),
+                      ),
+                    );
+                  },
                   child: Text(context.l10n.loginTitleText),
                 ),
               ),
@@ -98,7 +118,7 @@ class LoginPage extends StatelessWidget {
                     context.l10n.loginSignUpText,
                     style:
                         const TextStyle(decoration: TextDecoration.underline),
-                  )
+                  ),
                 ],
               ),
             ],
